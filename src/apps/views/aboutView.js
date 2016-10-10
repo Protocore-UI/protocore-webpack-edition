@@ -1,29 +1,23 @@
-(function() {
-    'use strict';
+import AboutTemplate from '../templates/aboutTpl.handlebars';
+import BaseView from './_baseView';
 
-    var AboutTemplate = require('../templates/aboutTpl.handlebars'),
-        BaseView = require('./_baseView');
+var AboutView = () => {
+    // @params: el (DOM Reference), template
+    BaseView.call(this, 'body', AboutTemplate);
+};
 
-    var AboutView = function() {
+AboutView.prototype = new BaseView();
 
-        // @params: el (DOM Reference), template
-        BaseView.call(this, 'body', AboutTemplate);
-    };
+AboutView.prototype.beforeRender = () => {
+    console.log("LOG: AboutView Before Render");
+};
 
-    AboutView.prototype = new BaseView();
+AboutView.prototype.afterRender = () => {
+    console.log("LOG: AboutView After Render");
+};
 
-    AboutView.prototype.beforeRender = function() {
-        console.log("LOG: AboutView Before Render");
-    };
+AboutView.prototype.eventsHash = () => {
+    console.log("LOG: AboutView Events Hash");
+};
 
-    AboutView.prototype.afterRender = function() {
-        console.log("LOG: AboutView After Render");
-    };
-
-    AboutView.prototype.eventsHash = function() {
-        console.log("LOG: AboutView Events Hash");
-    };
-
-    module.exports = AboutView;
-
-})();
+module.exports = AboutView;
