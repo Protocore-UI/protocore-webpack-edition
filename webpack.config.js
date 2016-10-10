@@ -6,6 +6,13 @@ module.exports = {
   },
   'module': {
     loaders: [{
+      test: /\.js?$/,
+      exclude: /node_modules/,
+      loader: 'babel',
+      query: {
+        presets: ['es2015']
+      }
+    }, {
       test: /\.less$/,
       loader: 'style-loader!css-loader!less-loader'
     }, {

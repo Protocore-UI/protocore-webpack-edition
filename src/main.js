@@ -1,3 +1,3 @@
-require('./stylesheets/less/_consolidate.less');
+import './stylesheets/less/_consolidate.less';
 
-require('./apps/router/routes');
+import './apps/router/routes';

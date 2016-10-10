@@ -1,29 +1,23 @@
-(function() {
-    'use strict';
+import HomeTemplate from '../templates/homeTpl.handlebars';
+import BaseView from './_baseView';
 
-    var HomeTemplate = require('../templates/homeTpl.handlebars'),
-        BaseView = require('./_baseView');
+var HomeView = () => {
+    // @params: el (DOM Reference), template
+    BaseView.call(this, 'body', HomeTemplate);
+};
 
-    var HomeView = function() {
+HomeView.prototype = new BaseView();
 
-        // @params: el (DOM Reference), template
-        BaseView.call(this, 'body', HomeTemplate);
-    };
+HomeView.prototype.beforeRender = () => {
+    console.log("LOG: HomeView Before Render");
+};
 
-    HomeView.prototype = new BaseView();
+HomeView.prototype.afterRender = () => {
+    console.log("LOG: HomeView After Render");
+};
 
-    HomeView.prototype.beforeRender = function() {
-        console.log("LOG: HomeView Before Render");
-    };
+HomeView.prototype.eventsHash = () => {
+    console.log("LOG: HomeView Events Hash");
+};
 
-    HomeView.prototype.afterRender = function() {
-        console.log("LOG: HomeView After Render");
-    };
-
-    HomeView.prototype.eventsHash = function() {
-        console.log("LOG: HomeView Events Hash");
-    };
-
-    module.exports = HomeView;
-
-})();
+module.exports = HomeView;
