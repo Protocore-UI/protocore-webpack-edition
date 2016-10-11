@@ -1,23 +1,45 @@
-import HomeTemplate from '../templates/homeTpl.handlebars';
+// import HomeTemplate from '../templates/homeTpl.handlebars';
 import BaseView from './_baseView';
 
-var HomeView = () => {
-    // @params: el (DOM Reference), template
-    BaseView.call(this, 'body', HomeTemplate);
-};
+class HomeView extends BaseView {
+  constructor(params) {
+    super(params);
+    console.log('LOG: Initialize HomeView');
+  }
 
-HomeView.prototype = new BaseView();
-
-HomeView.prototype.beforeRender = () => {
+  beforeRender() {
     console.log("LOG: HomeView Before Render");
-};
+  }
 
-HomeView.prototype.afterRender = () => {
+  afterRender() {
     console.log("LOG: HomeView After Render");
-};
+  }
 
-HomeView.prototype.eventsHash = () => {
+  eventsHash() {
     console.log("LOG: HomeView Events Hash");
+  }
 };
 
 module.exports = HomeView;
+
+//
+// let HomeView = () => {
+//     // @params: el (DOM Reference), template
+//     BaseView.call(this, 'body', HomeTemplate);
+// };
+//
+// HomeView.prototype = new BaseView();
+//
+// HomeView.prototype.beforeRender = () => {
+//     console.log("LOG: HomeView Before Render");
+// };
+//
+// HomeView.prototype.afterRender = () => {
+//     console.log("LOG: HomeView After Render");
+// };
+//
+// HomeView.prototype.eventsHash = () => {
+//     console.log("LOG: HomeView Events Hash");
+// };
+//
+// module.exports = HomeView;

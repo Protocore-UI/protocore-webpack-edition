@@ -36,6 +36,7 @@
     "crossroads": "^0.12.2",
     "express": "~4.13.4",
     "handlebars": "3.0.3",
+    "handlebars-loader": "^1.4.0",
     "hasher": "1.2.0",
     "jquery": "^2.1.4",
     "morgan": "~1.6.0",
@@ -45,10 +46,14 @@
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
     "chai": "^3.0.0",
     "css-loader": "^0.23.1",
     "csslint-loader": "^0.2.1",
+    "file-loader": "^0.9.0",
     "handlebars-loader": "^1.1.4",
+    "handlebars-template-loader": "^0.7.0",
+    "html-webpack-plugin": "^2.22.0",
     "jscs-loader": "^0.2.0",
     "jshint": "^2.8.0",
     "jshint-loader": "^0.8.3",
@@ -56,7 +61,8 @@
     "less": "^2.5.3",
     "less-loader": "^2.2.2",
     "mocha": "^2.2.5",
-    "style-loader": "^0.13.0"
+    "style-loader": "^0.13.0",
+    "webpack": "^1.13.2"
   },
   "keywords": [
     "webpack",
