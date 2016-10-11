@@ -2,6 +2,12 @@ import signals from "signals";
 import hasher from "hasher";
 import crossroads from "crossroads";
 
+import HomeView from '../views/homeView';
+import HomeTemplate from '../templates/homeTpl.handlebars';
+
+import AboutView from '../views/aboutView';
+import AboutTemplate from '../templates/aboutTpl.handlebars';
+
 let router = crossroads.create();
 
 let parseHash = (newHash) => {
@@ -10,18 +16,16 @@ let parseHash = (newHash) => {
 
 router.addRoute('', () => {
 	console.log("Home View");
-
-	var HomeView = require('../views/homeView');
-	var homeView = new HomeView();
-	homeView.initialize();
+	new HomeView({
+		template: HomeTemplate
+	});
 });
 
 router.addRoute('/about', () => {
 	console.log("About Us View");
-
-	var AboutView = require('../views/aboutView');
-	var aboutView = new AboutView();
-	aboutView.initialize();
+	new AboutView({
+		template: AboutTemplate
+	});
 });
 
 hasher.initialized.add(parseHash);

@@ -11,7 +11,7 @@ module.exports = {
         "prod": {
             "port": 8000,
             "uri": "localhost",
-            "codebase": "prod"
+            "codebase": "dist"
         }
     }
 }
