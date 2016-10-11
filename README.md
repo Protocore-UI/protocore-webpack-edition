@@ -3,9 +3,7 @@
 Protocore-webpack-edition is special Webpack implementation edition of Protocore project.
 
 ## Supports
-* Node.js v0.10.x or above
-* Node.js v4.0 new release
-* iojs 2.3.x or above
+* Node.js v6.0.0 or above
 
 ## List of npm/libs etc. that are used to build it
 
@@ -24,32 +22,21 @@ Assuming that Git is already installed & running:
 git clone https://github.com/Protocore-UI/protocore-webpack-edition.git
 ```
 
-Assuming that Node.js or io.js is already installed & running,
+Assuming that Node.js is already installed & running,
 
 Install dependencies:
 ```
 npm install
+
+npm install -g webpack
 ```
 
 Generate bundle file: (First command after installing dependencies)
 ```
-webpack -p
+npm run build
 ```
 
 To start the development server:
-```
-node server.js
-
-OR
-
-iojs server.js
-
-```
-or
-```
-NODE_ENV=development node server.js
-```
-or
 ```
 npm start
 ```

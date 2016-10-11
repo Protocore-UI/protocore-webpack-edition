@@ -1,6 +1,6 @@
 {
   "name": "protocore-webpack-edition",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Ashwin Hegde",
   "description": "Protocore-webpack-edition is special Webpack implementation edition of Protocore project.",
   "contributors": [
