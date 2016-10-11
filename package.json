@@ -52,7 +52,6 @@
     "csslint-loader": "^0.2.1",
     "file-loader": "^0.9.0",
     "handlebars-loader": "^1.1.4",
-    "handlebars-template-loader": "^0.7.0",
     "html-webpack-plugin": "^2.22.0",
     "jscs-loader": "^0.2.0",
     "jshint": "^2.8.0",
